@@ -5,10 +5,16 @@ public class Box {
     double height;
     double length;
 
-    void setDimens(double w, double h, double l) {
-        width = w;
-        height = h;
-        length = l;
+    Box() {
+        width = 0;
+        height = 0;
+        length = 0;
+    }
+
+    Box(double width, double height, double length) {
+        this.width = width;
+        this.height = height;
+        this.length = length;
     }
 
     double getVolume() {

@@ -3,16 +3,17 @@ package org.example;
 
 class Main {
     public static void main(String[] args) {
-//        Box box1 = new Box();
-//        box1.setDimens(10,10,10);
-//        Box box2 = new Box();
-//        box2.setDimens(20,20,20);
+//        Box box1 = new Box(10,10,10);
+//        Box box2 = new Box(20,20,20);
 //        box1.showVolume();
 //        box2.showVolume();
 
-        Rect rect = new Rect();
-        rect.setDimens(10,5);
-        System.out.println(rect.getArea());
+        Employee employee = new Employee("John", "Director", 100_000);
+        employee.showInfo();
+
+//        Rect rect = new Rect();
+//        rect.setDimens(10,5);
+//        System.out.println(rect.getArea());
 
 //        Dog dog = new Dog();
 //        dog.name = "tuzik";
