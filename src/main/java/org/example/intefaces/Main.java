@@ -4,38 +4,21 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-//        Cat cat = new Cat();
-//        Dog dog = new Dog();
-//        Bird bird = new Bird();
-//        Fish fish = new Fish();
-//        ArrayList<AbleToRun> animals = new ArrayList<>();
-//        animals.add(cat);
-//        animals.add(dog);
-//        animals.add(bird);
-//        for (AbleToRun animal : animals) {
-//            animal.run();
-//        }
-//        AbleToFly ableToFly = new Bird();
-//        ableToFly.fly();
-        Director director = new Director();
-        Programmer programmer = new Programmer();
-        Chef chef = new Chef();
+//        Director director = new Director();
+//        Programmer programmer = new Programmer();
+//        director.force(programmer);
 
-        ArrayList<Worker> workers = new ArrayList<>();
-        workers.add(director);
-        workers.add(programmer);
-        workers.add(chef);
-        for (Worker worker : workers) {
-            worker.work();
-        }
+//        Client client = new Client();
+//        WaiterBob bob = new WaiterBob();
+//        client.nakeOrder(bob, "Пицца");
 
-        ArrayList<Driver> drivers = new ArrayList<>();
-        drivers.add(programmer);
-        drivers.add(chef);
-        for (Driver driver : drivers) {
-            driver.drive();
-        }
-
-
+        Client client = new Client();
+        WaiterBob bob = new WaiterBob();
+        client.nakeOrder(new Waiter() {
+            @Override
+            public void bringOrder(String dish) {
+                System.out.println("bringing order " + dish);
+            }
+        }, "Пицца");
     }
 }
