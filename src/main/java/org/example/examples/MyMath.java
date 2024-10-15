@@ -1,4 +1,4 @@
-package org.example;
+package org.example.examples;
 
 public class MyMath {
     static int multiple(int a, int b) {

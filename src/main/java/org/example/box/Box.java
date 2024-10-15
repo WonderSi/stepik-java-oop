@@ -1,43 +1,43 @@
-package org.example;
+package org.example.box;
 
 public class Box {
-    double width;
-    double height;
-    double length;
+    private double width;
+    private double height;
+    private double length;
 
-    Box() {
+    public Box() {
         this(10);
     }
 
-    Box(Box another) {
+    public Box(Box another) {
         this(another.width, another.height, another.length);
     }
 
-    Box(double width, double height, double length) {
+    public Box(double width, double height, double length) {
         this.width = width;
         this.height = height;
         this.length = length;
     }
 
-    Box(double size) {
+    public Box(double size) {
         this(size, size, size);
     }
 
-    void setDimens(double width, double height, double length) {
+    public void setDimens(double width, double height, double length) {
         this.width = width;
         this.height = height;
         this.length = length;
     }
 
-    Box copy() {
+    public Box copy() {
         return new Box(width, height, length);
     }
 
-    Box copyDouble() {
-        return new Box(width*2, height*2, length*2);
+    public Box copyDouble() {
+        return new Box(width * 2, height * 2, length * 2);
     }
 
-    int compare(Box another) {
+    public int compare(Box another) {
         double currentVolume = getVolume();
         double anotherVolume = another.getVolume();
         int result;
@@ -52,11 +52,11 @@ public class Box {
         return result;
     }
 
-    double getVolume() {
+    private double getVolume() {
         return width * height * length;
     }
 
-    void showVolume() {
+    public void showVolume() {
         double volume = getVolume();
         System.out.println(volume);
     }
