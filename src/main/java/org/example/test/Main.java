@@ -6,6 +6,23 @@ import org.example.examples.Person;
 
 class Main {
     public static void main(String[] args) {
-        System.out.println(MyMath.sum(1,2,3,4354,3453,345,345,3));
+        MyArrayList employees = getEmployees();
+        employees.add("James");
+        employees.remove("John5");
+        for (int i = 0; i < employees.getSize(); i++) {
+            System.out.println(employees.get(i));
+        }
+    }
+
+    private static MyArrayList getEmployees() {
+        MyArrayList employees = new MyArrayList();
+        employees.add("John1");
+        employees.add("John2");
+        employees.add("John3");
+        employees.add("John4");
+        employees.add("John5");
+        employees.add("John6");
+        employees.add("John7");
+        return employees;
     }
 }
