@@ -23,6 +23,10 @@ public class Box {
         this(size, size, size);
     }
 
+    public void showInfo() {
+        System.out.println("Width: " + width + " Height: " + height + " Length: " + length);
+    }
+
     public void setDimens(double width, double height, double length) {
         this.width = width;
         this.height = height;
