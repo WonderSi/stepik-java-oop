@@ -6,15 +6,17 @@ public class Box {
     double length;
 
     Box() {
-        width = 0;
-        height = 0;
-        length = 0;
+        this(10);
     }
 
     Box(double width, double height, double length) {
         this.width = width;
         this.height = height;
         this.length = length;
+    }
+
+    Box(double size) {
+        this(size, size, size);
     }
 
     double getVolume() {
