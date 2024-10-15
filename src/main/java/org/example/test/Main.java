@@ -4,18 +4,29 @@ package org.example.test;
 import org.example.examples.MyMath;
 import org.example.examples.Person;
 
+import java.util.ArrayList;
+
 class Main {
     public static void main(String[] args) {
-        MyArrayList employees = getEmployees();
-        employees.add("James");
-        employees.remove("John5");
-        for (int i = 0; i < employees.getSize(); i++) {
-            System.out.println(employees.get(i));
+        ArrayList<Integer> numbers = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            numbers.add(i);
         }
+        ArrayList<String> names = getEmployees();
+        ArrayList<String> result = new ArrayList<>();
+
+        for (int i = 0; i < numbers.size(); i++) {
+            String s = numbers.get(i)+1 + " - " + names.get(i);
+            result.add(s);
+        }
+        for (String s : result) {
+            System.out.println(s);
+        }
+
     }
 
-    private static MyArrayList getEmployees() {
-        MyArrayList employees = new MyArrayList();
+    private static ArrayList<String> getEmployees() {
+        ArrayList<String> employees = new ArrayList<>();
         employees.add("John1");
         employees.add("John2");
         employees.add("John3");
