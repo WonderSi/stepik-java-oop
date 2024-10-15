@@ -5,6 +5,12 @@ public class Box {
     double height;
     double length;
 
+    void setDimens(double w, double h, double l) {
+        width = w;
+        height = h;
+        length = l;
+    }
+
     double getVolume() {
         return width * height * length;
     }
